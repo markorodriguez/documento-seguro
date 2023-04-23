@@ -6,7 +6,7 @@ const downloadRouter = express.Router();
 
 downloadRouter.get('/:filename', (req:Request, res:Response) => {
     const { filename } = req.params;
-    console.log(filename);
+    
     const exists = openFile(filename);
     if (exists) {
         // open file in browser
